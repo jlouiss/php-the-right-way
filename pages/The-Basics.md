@@ -20,15 +20,12 @@ var_dump($a == '5');     // compare value (ignore type); return true
 var_dump($a === 5);      // compare type/value (integer vs. integer); return true
 var_dump($a === '5');    // compare type/value (integer vs. string); return false
 
-/**
- * Strict comparisons
- */
+//Equality comparisons
 if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
     // code...
 }
 
-// vs.
-
+// vs. strict comparisons
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
 }
@@ -42,7 +39,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 
 ### If statements
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
+While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
 in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
 necessary as 'return' will end the function, causing 'else' to become moot.
 
